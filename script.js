@@ -1,11 +1,11 @@
-// script.js
+
 const todoInput = document.getElementById('todo-input');
 const addButton = document.getElementById('add-button');
 const todoList = document.getElementById('todo-list');
 
 let todos = [];
 
-// Function to render the to-do list
+
 function renderTodos() {
     todoList.innerHTML = '';
     todos.forEach((todo, index) => {
@@ -27,7 +27,7 @@ function renderTodos() {
     });
 }
 
-// Function to add a to-do item
+
 addButton.addEventListener('click', () => {
     const todoText = todoInput.value.trim();
     if (todoText) {
@@ -38,7 +38,7 @@ addButton.addEventListener('click', () => {
     }
 });
 
-// Function to edit a to-do item
+
 function editTodo(index) {
     const newTodoText = prompt('Edit to-do item:', todos[index].text);
     if (newTodoText) {
@@ -47,13 +47,13 @@ function editTodo(index) {
     }
 }
 
-// Function to delete a to-do item
+m
 function deleteTodo(index) {
     todos.splice(index, 1);
     renderTodos();
 }
 
-// Function to check/uncheck a to-do item
+
 function checkTodo(index) {
     todos[index].completed = !todos[index].completed;
     renderTodos();
